@@ -1,0 +1,36 @@
+[
+  {
+    "id": "1",
+    "slug": "kosu-bandi-icin-dogru-silikon-yagi-hangisidir",
+    "title": "Koşu Bandı İçin Hangi Silikon Yağı Kullanılmalıdır? 350 cSt Önemi",
+    "date": "12 Kasım 2026",
+    "author": "silikonyagi.tr",
+    "readTime": "4 dk",
+    "image": "/images/banners/hero-artoil.jpg",
+    "category": "Kullanıcı Rehberi",
+    "excerpt": "Koşu bandı motorunu ve sürücü kartını korumak için neden %100 saf 350 cSt silikon yağı kullanılmalıdır? WD-40 neden sıkılmamalıdır?",
+    "content": [
+      "<p class='lead'>Koşu bantlarında meydana gelen motor yanmaları ve sürücü kartı arızalarının %80'i yetersiz yağlama veya yanlış yağ kullanımından kaynaklanır. Koşu bandı paleti altında yalnızca %100 saf silikon yağı kullanılmalıdır.</p>",
+      "<h2>Neden 350 cSt Viskozite?</h2>",
+      "<p>350 cSt viskozite, palet sürtünmesini sıfırlarken bandın altına tutunabilen optimum yoğunluktur. Daha ince yağlar (50 cSt) kenarlardan akar, daha kalın yağlar (1000 cSt) ise yapışkanlık yaparak motoru zorlar.</p>",
+      "<h2>Kesinlikle Sıvı Gres veya WD-40 Kullanmayın!</h2>",
+      "<p>Petrokimyasal yağlar kauçuk bandı eritir ve elektrik iletkenliği nedeniyle yangın riski doğurur. Yalnızca saf dielektrik silikon yağı kullanılmalıdır.</p>"
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "silikon-yagi-nerelerde-kullanilir",
+    "title": "Silikon Yağı Nedir? Nerelerde ve Nasıl Kullanılır?",
+    "date": "13 Kasım 2026",
+    "author": "silikonyagi.tr",
+    "readTime": "5 dk",
+    "image": "/images/banners/hero-artoil.jpg",
+    "category": "Teknik Bilgi",
+    "excerpt": "Kalıp ayırmadan elektrik yalıtımına, O-ring bakımından tekstil sanayisine silikon yağlarının kullanım alanları.",
+    "content": [
+      "<p class='lead'>Silikon yağı, yüksek sıcaklık dayanımı (-50°C ile +200°C), mükemmel su iticilik ve yüksek dielektrik yalıtım özellikleri sunan sentetik polimerik bir yağlayıcıdır.</p>",
+      "<h2>Öne Çıkan Kullanım Alanları</h2>",
+      "<ul><li>Plastik ve kauçuk kalıp ayırma işlemleri</li><li>O-ring, conta ve fitil bakımı</li><li>Elektronik ve trafo yalıtımı</li><li>Koşu bandı ve fitness aletleri</li></ul>"
+    ]
+  }
+]

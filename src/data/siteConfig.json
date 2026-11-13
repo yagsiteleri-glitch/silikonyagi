@@ -1,0 +1,45 @@
+{
+  "siteName": "Silikon Yağı",
+  "siteTitle": "Silikon Yağı Fiyatları & Çeşitleri | %100 Saf Silikon Yağları",
+  "metaDescription": "Petrochem, Molykote ve 404 silikon yağı çeşitleri. 50, 100, 350, 1000 cSt koşu bandı silikon yağı ve greslerde toptan fiyat, aynı gün kargo.",
+  "domain": "https://silikonyagi.tr",
+  "phone": "+90 506 940 1210",
+  "phoneRaw": "+905069401210",
+  "whatsapp": "905069401210",
+  "whatsappMessage": "[silikonyagi.tr] MUSTERI ILETISIM HATTI\n\nMerhaba, silikon yaglari hakkinda detayli bilgi ve fiyat teklifi almak istiyorum.",
+  "email": "bilgi@silikonyagi.tr",
+  "address": "Arap Camii Mh. Bakır Sk. No:6/A Beyoğlu/İSTANBUL",
+  "primaryColor": "#0284c7",
+  "brands": [
+    {
+      "id": "all",
+      "name": "Tüm Markalar"
+    },
+    {
+      "id": "petrochem",
+      "name": "Petrochem",
+      "badge": "Saf Silikon Yağı",
+      "color": "#0284c7"
+    },
+    {
+      "id": "molykote",
+      "name": "Molykote",
+      "badge": "Endüstriyel Gres",
+      "color": "#dc2626"
+    },
+    {
+      "id": "404",
+      "name": "404",
+      "badge": "Pratik Sprey",
+      "color": "#eab308"
+    }
+  ],
+  "viscosities": [
+    "Tümü",
+    "50 cSt",
+    "100 cSt",
+    "350 cSt",
+    "1000 cSt",
+    "Gres & Sprey"
+  ]
+}
