@@ -3,11 +3,9 @@ import siteConfig from '../data/siteConfig.json';
 import products from '../data/products.json';
 import '../styles/global.css';
 
-const artoilProducts = products.filter(p => p.brand === 'artoil');
-const castrolProducts = products.filter(p => p.brand === 'castrol');
-const mobilProducts = products.filter(p => p.brand === 'mobil');
-const poProducts = products.filter(p => p.brand === 'petrol-ofisi');
-const shellProducts = products.filter(p => p.brand === 'shell');
+const petrochemProducts = products.filter(p => (p.brandSlug || p.brand || '').toLowerCase() === 'petrochem');
+const molykoteProducts = products.filter(p => (p.brandSlug || p.brand || '').toLowerCase() === 'molykote');
+const brand404Products = products.filter(p => (p.brandSlug || p.brand || '').toLowerCase() === '404');
 
 interface Props {
   title?: string;
@@ -171,65 +169,44 @@ const resolvedOgImage = rawOgImage.startsWith('http') ? rawOgImage : new URL(raw
             <a href="/" class="nav-a active">Ana Sayfa</a>
           </li>
 
-          <!-- Artoil Menu -->
+          <!-- Petrochem Menu -->
           <li class="nav-item has-dropdown">
             <a href="/petrochem" class="nav-a">
               Petrochem <i class="fas fa-chevron-down nav-caret"></i>
             </a>
             <ul class="sub-nav-menu">
-              <li class="sub-nav-highlight"><a href="/artoil"><strong>Tüm Artoil Ürünleri ({artoilProducts.length}) →</strong></a></li>
-              {artoilProducts.slice(0, 5).map(p => (
+              <li class="sub-nav-highlight"><a href="/petrochem"><strong>Tüm Petrochem Ürünleri ({petrochemProducts.length}) →</strong></a></li>
+              {petrochemProducts.slice(0, 6).map(p => (
                 <li><a href={`/urun/${p.id}`}>{p.name}</a></li>
               ))}
             </ul>
           </li>
 
-          <!-- Castrol Menu -->
+          <!-- Molykote Menu -->
           <li class="nav-item has-dropdown">
             <a href="/molykote" class="nav-a">
               Molykote <i class="fas fa-chevron-down nav-caret"></i>
             </a>
             <ul class="sub-nav-menu">
-              <li class="sub-nav-highlight"><a href="/castrol"><strong>Tüm Castrol Ürünleri ({castrolProducts.length}) →</strong></a></li>
-              {castrolProducts.slice(0, 5).map(p => (
+              <li class="sub-nav-highlight"><a href="/molykote"><strong>Tüm Molykote Ürünleri ({molykoteProducts.length}) →</strong></a></li>
+              {molykoteProducts.map(p => (
                 <li><a href={`/urun/${p.id}`}>{p.name}</a></li>
               ))}
             </ul>
           </li>
 
-          <!-- Mobil Menu -->
+          <!-- 404 Menu -->
           <li class="nav-item has-dropdown">
-            <a href="/mobil" class="nav-a">
-              Mobil <i class="fas fa-chevron-down nav-caret"></i>
+            <a href="/404-silikon" class="nav-a">
+              404 <i class="fas fa-chevron-down nav-caret"></i>
             </a>
             <ul class="sub-nav-menu">
-              <li class="sub-nav-highlight"><a href="/mobil"><strong>Tüm Mobil Ürünleri ({mobilProducts.length}) →</strong></a></li>
-              {mobilProducts.slice(0, 5).map(p => (
+              <li class="sub-nav-highlight"><a href="/404-silikon"><strong>Tüm 404 Ürünleri ({brand404Products.length}) →</strong></a></li>
+              {brand404Products.map(p => (
                 <li><a href={`/urun/${p.id}`}>{p.name}</a></li>
               ))}
             </ul>
           </li>
-
-          <!-- Petrol Ofisi Menu -->
-          <li class="nav-item has-dropdown">
-            <a href="/petrol-ofisi" class="nav-a">
-              Petrol Ofisi <i class="fas fa-chevron-down nav-caret"></i>
-            </a>
-            <ul class="sub-nav-menu">
-              <li class="sub-nav-highlight"><a href="/petrol-ofisi"><strong>Tüm Petrol Ofisi Ürünleri ({poProducts.length}) →</strong></a></li>
-              {poProducts.slice(0, 5).map(p => (
-                <li><a href={`/urun/${p.id}`}>{p.name}</a></li>
-              ))}
-            </ul>
-          </li>
-
-          <!-- Shell Menu -->
-          <li class="nav-item has-dropdown">
-            <a href="/shell" class="nav-a">
-              Shell <i class="fas fa-chevron-down nav-caret"></i>
-            </a>
-            <ul class="sub-nav-menu">
-              <li class="sub-nav-highlight"><a href="/shell"><strong>Tüm Shell Ürünleri ({shellProducts.length}) →</strong></a></li>
               {shellProducts.slice(0, 5).map(p => (
                 <li><a href={`/urun/${p.id}`}>{p.name}</a></li>
               ))}
@@ -321,86 +298,52 @@ const resolvedOgImage = rawOgImage.startsWith('http') ? rawOgImage : new URL(raw
           <!-- Brands Section with Accordion -->
           <li class="drawer-section-label">Markalarımız & Ürünler</li>
 
-          <!-- Artoil Accordion -->
+          <!-- Petrochem Accordion -->
           <li class="drawer-accordion-item">
             <button class="drawer-accordion-btn" type="button">
-              <span class="acc-brand-title">Artoil</span>
+              <span class="acc-brand-title">Petrochem</span>
               <div class="acc-right">
-                <span class="acc-count-pill">{artoilProducts.length}</span>
+                <span class="acc-count-pill">{petrochemProducts.length}</span>
                 <i class="fas fa-chevron-down acc-arrow"></i>
               </div>
             </button>
             <div class="drawer-accordion-panel">
-              <a href="/artoil" class="drawer-sublink highlight">Tüm Artoil Ürünleri ({artoilProducts.length}) →</a>
-              {artoilProducts.slice(0, 5).map(p => (
+              <a href="/petrochem" class="drawer-sublink highlight">Tüm Petrochem Ürünleri ({petrochemProducts.length}) →</a>
+              {petrochemProducts.map(p => (
                 <a href={`/urun/${p.id}`} class="drawer-sublink">{p.name}</a>
               ))}
             </div>
           </li>
 
-          <!-- Castrol Accordion -->
+          <!-- Molykote Accordion -->
           <li class="drawer-accordion-item">
             <button class="drawer-accordion-btn" type="button">
-              <span class="acc-brand-title">Castrol</span>
+              <span class="acc-brand-title">Molykote</span>
               <div class="acc-right">
-                <span class="acc-count-pill">{castrolProducts.length}</span>
+                <span class="acc-count-pill">{molykoteProducts.length}</span>
                 <i class="fas fa-chevron-down acc-arrow"></i>
               </div>
             </button>
             <div class="drawer-accordion-panel">
-              <a href="/castrol" class="drawer-sublink highlight">Tüm Castrol Ürünleri ({castrolProducts.length}) →</a>
-              {castrolProducts.slice(0, 5).map(p => (
+              <a href="/molykote" class="drawer-sublink highlight">Tüm Molykote Ürünleri ({molykoteProducts.length}) →</a>
+              {molykoteProducts.map(p => (
                 <a href={`/urun/${p.id}`} class="drawer-sublink">{p.name}</a>
               ))}
             </div>
           </li>
 
-          <!-- Mobil Accordion -->
+          <!-- 404 Accordion -->
           <li class="drawer-accordion-item">
             <button class="drawer-accordion-btn" type="button">
-              <span class="acc-brand-title">Mobil</span>
+              <span class="acc-brand-title">404</span>
               <div class="acc-right">
-                <span class="acc-count-pill">{mobilProducts.length}</span>
+                <span class="acc-count-pill">{brand404Products.length}</span>
                 <i class="fas fa-chevron-down acc-arrow"></i>
               </div>
             </button>
             <div class="drawer-accordion-panel">
-              <a href="/mobil" class="drawer-sublink highlight">Tüm Mobil Ürünleri ({mobilProducts.length}) →</a>
-              {mobilProducts.slice(0, 5).map(p => (
-                <a href={`/urun/${p.id}`} class="drawer-sublink">{p.name}</a>
-              ))}
-            </div>
-          </li>
-
-          <!-- Petrol Ofisi Accordion -->
-          <li class="drawer-accordion-item">
-            <button class="drawer-accordion-btn" type="button">
-              <span class="acc-brand-title">Petrol Ofisi</span>
-              <div class="acc-right">
-                <span class="acc-count-pill">{poProducts.length}</span>
-                <i class="fas fa-chevron-down acc-arrow"></i>
-              </div>
-            </button>
-            <div class="drawer-accordion-panel">
-              <a href="/petrol-ofisi" class="drawer-sublink highlight">Tüm Petrol Ofisi Ürünleri ({poProducts.length}) →</a>
-              {poProducts.slice(0, 5).map(p => (
-                <a href={`/urun/${p.id}`} class="drawer-sublink">{p.name}</a>
-              ))}
-            </div>
-          </li>
-
-          <!-- Shell Accordion -->
-          <li class="drawer-accordion-item">
-            <button class="drawer-accordion-btn" type="button">
-              <span class="acc-brand-title">Shell</span>
-              <div class="acc-right">
-                <span class="acc-count-pill">{shellProducts.length}</span>
-                <i class="fas fa-chevron-down acc-arrow"></i>
-              </div>
-            </button>
-            <div class="drawer-accordion-panel">
-              <a href="/shell" class="drawer-sublink highlight">Tüm Shell Ürünleri ({shellProducts.length}) →</a>
-              {shellProducts.slice(0, 5).map(p => (
+              <a href="/404-silikon" class="drawer-sublink highlight">Tüm 404 Ürünleri ({brand404Products.length}) →</a>
+              {brand404Products.map(p => (
                 <a href={`/urun/${p.id}`} class="drawer-sublink">{p.name}</a>
               ))}
             </div>
